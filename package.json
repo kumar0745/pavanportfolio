@@ -1,10 +1,12 @@
 {
-  "name": "pavan-kumar-cinematic-portfolio",
-  "version": "8.0.0",
+  "name": "pavan-kumar-city-to-home-portfolio",
+  "version": "8.1.0",
   "private": true,
-  "description": "Pastel city-to-home Three.js portfolio with a live NeuroDetect website screenshot and project gallery.",
-  "license": "UNLICENSED",
-  "dependencies": {
-    "three": "0.187.0"
+  "description": "Pastel city-to-home Three.js portfolio for Pavan Kumar.",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=20"
   }
-}
+}\n
