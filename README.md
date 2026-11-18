@@ -1,45 +1,74 @@
-# Pavan Kumar — Pastel City-to-Home Three.js Portfolio
+# Pavan Kumar — Developer Portfolio
 
-A pastel story-led developer portfolio that starts on a bright neighbourhood street and takes visitors into a 3D home. Its rooms present Pavan's profile, education, internships, skills, projects, credentials and contact information.
+Personal portfolio repository for Pavan Kumar, a Computer Science graduate focused on AI/ML, Generative AI, full-stack development and data-oriented software engineering.
 
-## Repository status
+> **Repository readiness:** The current default-branch snapshot contains deployment documentation and build scaffolding, but it does not yet contain the website entry point and required media listed below. The production build is therefore **not verified and is expected to fail until the complete portfolio release is committed**. This status is intentionally explicit so visitors and recruiters are not misled.
 
-This repository currently contains the deployment scaffolding. Download the complete release ZIP and run the included `PUSH_TO_GITHUB.bat` to copy the full HTML, CSS, JavaScript, Three.js scene, video, presenter image, resume and project previews into this repository.
+## Portfolio concept
 
-## Upload the complete portfolio
+The intended experience is a pastel, story-led city-to-home portfolio. Visitors explore dedicated spaces for the profile, education, skills, internships, projects, credentials and contact details.
 
-1. Download and extract the complete portfolio release ZIP.
-2. Open the extracted `pavan-kumar-portfolio` folder.
-3. Double-click `PUSH_TO_GITHUB.bat`.
-4. Complete GitHub sign-in if Git Credential Manager opens a browser.
-5. Wait for the script to report `SUCCESS`.
+Planned experience highlights:
+- Responsive, accessible portfolio navigation
+- Three.js city-to-home environment with reduced-motion support
+- Dedicated project and experience sections
+- Project links and genuine screenshots where available
+- Resume and contact information, published only after a privacy review
 
-The script pushes the complete application to `main`. Vercel is already linked to this repository and should automatically start a deployment after the full source commit is pushed.
+## Current repository contents
 
-## Vercel build configuration
+The repository currently includes:
+- Vercel configuration and deployment notes
+- A Node.js static-site build script
+- Project link/screenshot configuration and a small set of assets
+- Upload and release guidance
 
-- Framework: Other / static site
-- Root directory: repository root
-- Install command: `npm install --ignore-scripts --no-audit --no-fund`
-- Build command: `npm run build`
-- Output directory: `dist`
-- Production branch: `main`
+The following files are required by `scripts/build.js` but are not present in the inspected default-branch root snapshot:
+- `index.html`
+- `styles.css`
+- `script.js`
+- `three-world.js`
+- `assets/pavan-developer-reveal.mp4`
+- `assets/pavan-kumar-resume.pdf`
+- `assets/pavan-presenter.png`
 
-The build script copies the root website assets into `dist/` and checks required files. See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md).
+Do not mark this repository as deployment-ready until those files are committed and the production build succeeds.
 
-## Portfolio features
+## Local setup and build
 
-- Cinematic developer reveal and presenter character.
-- Pastel city-to-home 3D journey with separate rooms and interactive doors.
-- Study, workshop, project gallery, library and contact garden.
-- NeuroDetect live project: https://neurodetect.lovable.app/
-- Other project detail panels, technology marks, credentials and resume.
-- Responsive layout and reduced-motion support.
+Requirements: Node.js 22.x.
 
-## Screenshot accuracy
+```bash
+npm install
+npm run build
+```
 
-The NeuroDetect card uses an on-demand Thum.io screenshot request; availability depends on that external service. Other project preview images are illustrative UI concepts unless replaced with genuine website screenshots.
+Expected output: `dist/`.
 
-## Privacy
+At the current repository snapshot, the build script checks for the missing website files above and exits with a clear error. This is expected until the complete release is uploaded.
 
-The portfolio release contains your supplied resume with contact details, portrait and intro video. This repository is public; anyone can view and download its files after they are pushed. Never commit API keys, tokens, passwords or private documents.
+## Deployment
+
+The repository contains a Vercel configuration and deployment notes in [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md). Configure the project to use the repository root and `dist` as the output directory only after the source files are present and `npm run build` passes.
+
+## Project links
+
+- NeuroDetect demo: https://neurodetect.lovable.app/
+- GitHub profile: https://github.com/kumar0745
+- LinkedIn: https://www.linkedin.com/in/pavan-kumar-1803a128b/
+
+Other project URLs and their verified status should be maintained in [PROJECT_SCREENSHOTS_AND_URLS.md](PROJECT_SCREENSHOTS_AND_URLS.md).
+
+## Release checklist
+
+- [ ] Commit the complete portfolio source and required assets.
+- [ ] Review the resume, portrait and video before making them public.
+- [ ] Replace illustrative previews with genuine project screenshots where possible.
+- [ ] Run `npm run build` successfully.
+- [ ] Test desktop, mobile, keyboard navigation and reduced-motion behavior.
+- [ ] Verify all project, LinkedIn, GitHub and contact links.
+- [ ] Deploy to Vercel and verify the production URL.
+
+## Privacy and security
+
+This is a public repository. Anyone can view and download committed files. Never commit API keys, access tokens, passwords, private certificates or personal documents that are not intended for public release. Review personal contact details and media before publishing.
